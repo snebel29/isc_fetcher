@@ -23,6 +23,6 @@ ARGV.each do |option|
   end
 end
 
-show_help('limit option must to be between 10 and 10000') if options[:limit] > 10000
+show_help('limit option must to be between 10 and 10000') if options[:limit] > 10000 or options[:limit] < 10
 
 ISC::Attack.new(options).fetch
