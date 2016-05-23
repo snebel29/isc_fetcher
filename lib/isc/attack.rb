@@ -11,7 +11,6 @@ module ISC
       response = HTTParty.get("https://isc.sans.edu/api/sources/attacks/#{limit}/#{date}/handler?json")
       attacks = JSON.load(response.body)
       file_content = to_csv(attacks)
-      puts file_content
       write_to_file(file_content, 'attacks.csv')
     end
 
@@ -28,6 +27,7 @@ module ISC
 
     def write_to_file(csv, file)
       File.open(file, 'w') {|f| f.write(csv)}
+      puts "Write to file #{file}"
     end
 
     def clean_ip(raw_ip)
