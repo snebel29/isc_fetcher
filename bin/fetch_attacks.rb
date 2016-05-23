@@ -7,7 +7,6 @@ def show_help(message)
   puts "Error: #{message}"
   puts "Usage: #{File.basename(__FILE__)} [options]"
   puts "  --limit=INTEGER  Number of results between 10 and 10000, default 100"
-  puts "  --help           Print this help"
   exit(1)
 end
 
