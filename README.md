@@ -17,5 +17,6 @@ rspec spec
 
 Run
 ```
-./bin/fetch_attacks.rb
+Usage: bin/fetch_attacks.rb [options]
+  --limit=INTEGER  Number of results between 10 and 10000, default 100
 ```
